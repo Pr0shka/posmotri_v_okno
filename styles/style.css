@@ -13,9 +13,12 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -35,4 +38,234 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 700;
+  height: 34px;
+  align-items: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  height: 534px;
+  gap: 30px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+}
+
+.result__video-container {
+  position: relative;
+}
+
+.result__video {
+  width: 711px;
+  height: 400px;
+}
+
+/* FORM STYLE START */
+
+.search-form {
+  display: flex;
+  gap: 40px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+
+.search-form__label {
+  cursor: pointer;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+}
+
+.search-form__textfield {
+  border: none;
+  background-color: transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  height: 27px;
+  width: 225px;
+  color: #fff;
+  font-size: 18px;
+  cursor: text;
+  appearance: none;
+  outline: none;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 3px;
+}
+
+.search-form__label {
+  display: flex;
+  gap: 5px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* FORM STYLE END */
+
+.content__details {
+  width: 407px;
+  height: 100%;
+}
+
+.title {
+  margin-top: 3px;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  height: 298px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: 399px;
+}
+
+.cards-list-item-template {
+  height: 100px;
+}
+
+.content__card-link {
+  margin: 2px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__video-card {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 31px;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__video-card-title {
+  color: #fff;
+  font-family: Oswald;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #fff;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
 }
