@@ -263,7 +263,7 @@ button:active {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  max-height: 35px;
+  max-width: 200px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
